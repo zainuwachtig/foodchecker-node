@@ -1,0 +1,31 @@
+{
+  "name": "progressive-web-apps-2122",
+  "version": "1.0.0",
+  "description": "![pwa](https://user-images.githubusercontent.com/3104648/28351989-7f68389e-6c4b-11e7-9bf2-e9fcd4977e7a.png)",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zainuwachtig/progressive-web-apps-2122.git"
+  },
+  "keywords": [],
+  "author": "Zain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zainuwachtig/progressive-web-apps-2122/issues"
+  },
+  "homepage": "https://github.com/zainuwachtig/progressive-web-apps-2122#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
