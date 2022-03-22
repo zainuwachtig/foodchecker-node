@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --color-default: white;
+  --color-emptystate: #c6972c;
+  --color-errorstate: #97392d;
+}
+
+body {
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+/* Melding */
+.melding {
+  display: flex;
+  width: 20em;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  margin: 1em auto;
+  /* transition: 1s; */
+
+  background-color: var(--color-default);
+}
+
+.melding svg {
+  width: 2em;
+  margin-right: 1.2em;
+}
+
+.onzichtbaar {
+  display: none;
+}
+
+/* Ideal State */
+.product-gevonden img {
+  max-height: 4em;
+}
+
+.product-gevonden {
+  justify-content: space-between;
+  background-color: var(--color-default);
+  min-width: 40vw;
+}
+
+.product-gevonden p {
+  color: black;
+}
+
+/* Loading State */
+.loader {
+  background-color: var(--color-default);
+}
+
+.loader svg {
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error State */
+.error {
+  background-color: var(--color-errorstate);
+}
+
+/* Empty State */
+.empty {
+  background-color: var(--color-emptystate);
+}
+
+.error svg,
+.empty svg {
+  fill: var(--color-default);
+}
+
+.error p,
+.empty p {
+  color: var(--color-default);
+}
+
+.meer-info {
+  width: 50%;
+  aspect-ratio: 2/1;
+  background-color: var(--color-default);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+}
+
+.meer-info ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.meer-info ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meer-info ul li p {
+  padding: 2em;
+  background-color: #75ab13;
+  color: white;
+  border-radius: 40% 70% 60% 90%;
+
+  font-weight: bold;
+  margin-bottom: 1em;
+  transition: 1s;
+}
+
+.meer-info ul li p:hover {
+  border-radius: 74% 17% 29% 61% / 68% 37% 46% 22%;
+}
+
+.meer-info svg {
+  height: 2em;
+  position: absolute;
+  right: 2em;
+  top: 1.2em;
+}
