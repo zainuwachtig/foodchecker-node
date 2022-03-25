@@ -1,4 +1,3 @@
-const https = require('https');
 const express = require('express');
 const app = express();
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
@@ -21,7 +20,7 @@ app.get('/product/:barcode', async function(req, res) {
   const baseUrl = 'https://world.openfoodfacts.org/api/v0/product/';
   const barcode = req.params.barcode;
  
-  return await fetch(baseUrl + barcode + '.json')
+  return await fetch(baseUrl + barcode)
     .then((response) => response.json())
     .then((data) => res.render('product', { data }))
     .catch((error) => error) 

@@ -16,7 +16,7 @@ async function detectCamera() {
     }
     
     await camera.play();
-    detectCamera(camera)
+    detectBarcode(camera)
 };
 
 // https://dev.to/ycmjason/detecting-barcode-from-the-browser-d7n
