@@ -27,6 +27,7 @@
     "node-fetch": "^3.2.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "pwa-asset-generator": "^6.0.6"
   }
 }
