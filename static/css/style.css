@@ -28,6 +28,22 @@ video {
 header {
   display: flex;
   justify-content: center;
+  width: 100vw;
+  height: 10%;
+  position: absolute;
+  top: 0;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  z-index: 10;
+}
+
+header form input {
+  height: 2em;
+  align-self: center;
+}
+
+header form input:focus {
+  outline: 2px solid rgb(30, 123, 41);
 }
 
 /* Melding */
