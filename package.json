@@ -8,7 +8,9 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "nodemon app.js",
+    "minify-js": "minify ./static/js/script.js > ./static/js/script.min.js",
+    "minify-css": "minify ./static/css/style.css > ./static/css/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -22,12 +24,14 @@
   },
   "homepage": "https://github.com/zainuwachtig/progressive-web-apps-2122#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "node-fetch": "^3.2.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
-    "pwa-asset-generator": "^6.0.6"
+    "pwa-asset-generator": "^6.0.6",
+    "uglify-js": "^3.15.3"
   }
 }

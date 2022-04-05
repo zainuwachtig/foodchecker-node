@@ -1,9 +1,17 @@
 const express = require('express');
 const app = express();
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
+const compression = require('compression');
 
 const hostname = '127.0.0.1';
 const port = 5500;
+
+app.use(compression());
+
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=365000000, immutable');
+  next();
+});
 
 // Template engine
 app.set('view engine', 'ejs');
@@ -21,7 +29,6 @@ app.get('/', (req, res) => {
 app.get('/product/:barcode', async (req, res) => {
   const baseUrl = 'https://world.openfoodfacts.org/api/v0/product/';
   const barcode = req.params.barcode;
- 
   return await fetch(baseUrl + barcode)
     .then((response) => response.json())
     .then((data) => res.render('product', { data }))
