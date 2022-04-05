@@ -11,8 +11,10 @@ async function detectCamera() {
   
     // Als de camera is toegestaan wordt de melding weggehaald
     if (stream.getVideoTracks().length > 0) {
-      const melding = document.querySelector('.melding');
+      const melding = document.querySelector('.camera-toestaan');
+      if(melding) {
       melding.classList.add('onzichtbaar')
+      }
     }
     
     await camera.play();

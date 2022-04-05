@@ -28,8 +28,12 @@ app.get('/product/:barcode', async (req, res) => {
     .catch((error) => error) 
 })
 
-app.post('/', (req, res) => {
+app.post(['/', '/product/:barcode'], (req, res) => {
   res.redirect('/product/' + req.body.search)
+});
+
+app.get('/offline', (req, res) => {
+  res.render('offline')
 });
 
 app.listen(port, hostname, () => {

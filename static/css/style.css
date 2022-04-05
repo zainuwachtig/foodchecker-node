@@ -40,6 +40,11 @@ header {
 header form input {
   height: 2em;
   align-self: center;
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 header form input:focus {
@@ -59,8 +64,6 @@ header form input:focus {
   left: 0;
   right: 0;
   margin: 1em auto;
-  /* transition: 1s; */
-
   background-color: var(--color-default);
 }
 
