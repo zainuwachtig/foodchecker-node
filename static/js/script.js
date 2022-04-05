@@ -31,14 +31,17 @@ async function detectBarcode(camera) {
         return;
       // Wanneer een product gevonden is, wordt dat in een array gezet en daar wordt de eerste dan uitgehaald, wat de gescande barcode is.
       } else {
-        const barcode = barcodes[0].rawValue
+        const barcode = barcodes[0].rawValue;
+        const zoekveld = document.getElementById('zoekveld');
 
-        // document.querySelector('input').value = barcode
-        // document.querySelector('input').submit()
-        // console.log(document.querySelector('input').value)
+        // Zodat je zowel een barcode kan typen als scannen
+        zoekveld.value = parseInt(barcode)
+        if(zoekveld.value.length == 13) {
+          document.querySelector('header form').submit()
+        }
 
         // Hiermee voert die getData(barcode) uit
-        window.location.pathname = 'product/' + barcode;
+        // window.location.pathname = 'product/' + barcode;
       }
     }, 1000)
 };
