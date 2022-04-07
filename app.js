@@ -4,7 +4,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const compression = require('compression');
 
 const hostname = '127.0.0.1';
-const port = 5500;
+const port = process.env.PORT || 5500;
 
 app.use(compression());
 
