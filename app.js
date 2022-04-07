@@ -40,6 +40,10 @@ app.get('/offline', (req, res) => {
   res.render('offline');
 });
 
+app.use((req, res) => {
+  res.status(404).redirect('/');
+});
+
 app.listen(port, () => {
   console.log("App is running on port " + port);
 });
