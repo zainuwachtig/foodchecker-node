@@ -6,6 +6,7 @@
     "start_url": "/",
     "display": "fullscreen",
     "description": "Scant de barcodes van producten",
+    "theme-color": "#1e7b29",
     "icons": [
         {
           "src": "img/icons/manifest-icon-192.maskable.png",

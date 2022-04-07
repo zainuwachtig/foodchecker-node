@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "nodemon app.js",
+    "start": "node app.js",
     "minify-js": "minify ./static/js/script.js > ./static/js/script.min.js",
     "minify-css": "minify ./static/css/style.css > ./static/css/style.min.css"
   },
