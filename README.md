@@ -94,6 +94,8 @@ Ten slotte haalde ik de applicatie door [Lighthouse](https://developers.google.c
 
 ## Activity Diagram
 
+![Activity Diagram](https://user-images.githubusercontent.com/74155415/162317369-a623ceef-b876-4764-b170-01f002a7ffd3.png)
+
 ## License
 
 [MIT](LICENSE)
