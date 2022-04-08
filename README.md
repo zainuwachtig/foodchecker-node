@@ -94,7 +94,7 @@ Ten slotte haalde ik de applicatie door [Lighthouse](https://developers.google.c
 
 ## Activity Diagram
 
-![Activity Diagram](https://user-images.githubusercontent.com/74155415/162317369-a623ceef-b876-4764-b170-01f002a7ffd3.png)
+![Activity Diagram](https://user-images.githubusercontent.com/74155415/162404671-33c6b2bd-1cca-4791-bac8-fa33bbd50a14.png)
 
 ## License
 
